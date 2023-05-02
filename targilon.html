@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // כתבו מחלקה המייצגת יוזר, לכל יוזר יש שם, אימייל וסיסמה
+        // במחלקה הגדירו בנאי שמאתחל את משתני המחלקה 
+        // הגדירו מתודה שתפקידה להדפיס לקונסול את כל פרטי היוזר ללא הסיסמה
+
+        function User(name, email, password) {
+            this.name = name;
+            this.email = email;
+            this.password = password || "********";
+            this.getDetails = function () {
+                console.log(`Username is: ${this.name}, Email is: ${this.email}`);
+            };
+        }
+
+        let users = [
+            new User("Israel", "IL@gmail.com", "05051948",),
+            new User("elad", "lad@gmail.com", "050519458",),
+        ];
+
+        for (let user of users) user.getDetails();
+
+
+
+
+    </script>
+</body>
+
+</html>
